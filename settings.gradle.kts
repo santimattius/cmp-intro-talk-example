@@ -1,4 +1,4 @@
-rootProject.name = "kmp-compose-gradle-skeleton"
+rootProject.name = "cmp-intro-talk-example"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
