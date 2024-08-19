@@ -1,4 +1,5 @@
-# KMP Compose Gradle Skeleton
+# Build iOS and Android apps 100% in Kotlin with Compose Multiplatform
+
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
