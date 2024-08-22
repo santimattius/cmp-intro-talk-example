@@ -69,6 +69,11 @@ kotlin {
             api(libs.koin.core)
             api(libs.koin.compose)
             api(libs.koin.composeViewModel)
+
+            implementation(libs.compottie.core)
+            implementation(libs.compottie.dot)
+            implementation(libs.compottie.network)
+            implementation(libs.compottie.resources)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

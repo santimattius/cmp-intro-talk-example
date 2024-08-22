@@ -13,7 +13,7 @@ androidx-core-ktx = "1.13.1"
 compose = "1.6.8"
 compose-plugin = "1.6.11"
 
-androidx-navigation = "2.8.0-dev1762"
+androidx-navigation = "2.8.0-alpha08"
 androidx-lifecycle = "2.8.0"
 
 statelyCommon = "2.0.7"
@@ -24,6 +24,8 @@ koinComposeMultiplatform = "4.0.0-RC1"
 
 kotlinxCoroutinesAndroid = "1.8.1"
 ktorVersion = "2.3.12"
+
+compottie="2.0.0-beta02"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
@@ -52,6 +54,12 @@ ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVer
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorVersion" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
+
+compottie-core = { module = "io.github.alexzhirkevich:compottie", version.ref = "compottie" }
+compottie-dot = { module = "io.github.alexzhirkevich:compottie-dot", version.ref = "compottie" }
+compottie-network = { module = "io.github.alexzhirkevich:compottie-network", version.ref = "compottie" }
+compottie-resources = { module = "io.github.alexzhirkevich:compottie-resources", version.ref = "compottie" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

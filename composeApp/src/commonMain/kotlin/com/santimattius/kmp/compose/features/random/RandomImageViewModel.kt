@@ -1,4 +1,4 @@
-package com.santimattius.kmp.compose.features.home
+package com.santimattius.kmp.compose.features.random
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

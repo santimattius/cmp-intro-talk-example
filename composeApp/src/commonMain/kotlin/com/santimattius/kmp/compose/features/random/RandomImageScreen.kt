@@ -1,4 +1,4 @@
-package com.santimattius.kmp.compose.features.home
+package com.santimattius.kmp.compose.features.random
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -22,18 +22,25 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.santimattius.kmp.compose.core.ui.components.AppBar
+import com.santimattius.kmp.compose.core.ui.components.BackIcon
 import com.santimattius.kmp.compose.core.ui.components.ErrorView
 import com.santimattius.kmp.compose.core.ui.components.LoadingIndicator
 import com.santimattius.kmp.compose.core.ui.components.NetworkImage
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun HomeScreen(
+fun RandomImageScreen(
     screenModel: HomeViewModel = koinViewModel<HomeViewModel>(),
+    onBack: () -> Unit = {}
 ) {
     val state by screenModel.state.collectAsStateWithLifecycle()
     Scaffold(
-        topBar = { AppBar(title = "Compose Skeleton") },
+        topBar = { AppBar(
+            title = "Compose Skeleton",
+            navigationIcon = {
+                BackIcon(onClick = onBack)
+            }
+        ) },
         floatingActionButtonPosition = FabPosition.Center,
         floatingActionButton = {
             FloatingActionButton(onClick = { screenModel.randomImage() }) {

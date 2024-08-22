@@ -5,7 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.santimattius.kmp.compose.features.home.HomeScreen
+import com.santimattius.kmp.compose.features.counter.CounterScreen
+import com.santimattius.kmp.compose.features.lottie.LottieScreen
+import com.santimattius.kmp.compose.features.menu.MenuOptions
+import com.santimattius.kmp.compose.features.menu.MenuScreen
+import com.santimattius.kmp.compose.features.random.RandomImageScreen
 import com.santimattius.kmp.compose.features.splash.SplashScreen
 
 @Composable
@@ -20,13 +24,35 @@ fun Navigation(
             SplashScreen {
                 with(navController) {
                     popBackStack()
-                    navigate(Home)
+                    navigate(Menu)
                 }
             }
         }
 
-        composable<Home> {
-            HomeScreen()
+        composable<Menu> {
+            MenuScreen {
+                navController.navigate(it.route)
+            }
+        }
+
+        composable(
+            route = MenuOptions.Random.route
+        ) {
+            RandomImageScreen {
+                navController.popBackStack()
+            }
+        }
+
+        composable(
+            route = MenuOptions.Flutter.route
+        ) {
+            CounterScreen { navController.popBackStack() }
+        }
+
+        composable(
+            route = MenuOptions.Lottie.route
+        ) {
+            LottieScreen { navController.popBackStack() }
         }
     }
 }
