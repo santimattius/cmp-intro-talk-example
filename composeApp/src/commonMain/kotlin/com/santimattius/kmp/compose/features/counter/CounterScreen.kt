@@ -19,20 +19,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.santimattius.kmp.compose.core.ui.components.AppBar
-import com.santimattius.kmp.compose.core.ui.components.BackIcon
+import com.santimattius.kmp.compose.core.ui.components.ArrowBackIcon
 
 @Composable
-fun CounterScreen(
-    onBack: () -> Unit
-) {
+fun CounterScreen() {
     var incrementCounter by remember { mutableStateOf(0) }
     Scaffold(
-        topBar = {
-            AppBar(
-                title = "Compose Demo Home Page",
-                navigationIcon = { BackIcon(onBack) }
-            )
-        },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {

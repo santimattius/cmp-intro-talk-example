@@ -37,7 +37,7 @@ fun AppBar(
 }
 
 @Composable
-fun BackIcon(onClick: () -> Unit) {
+fun ArrowBackIcon(onClick: () -> Unit) {
     IconButton(onClick = onClick) {
         Icon(
             imageVector = Icons.AutoMirrored.Default.ArrowBack,
