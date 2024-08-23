@@ -4,3 +4,8 @@ enum class AppQualifiers {
     Client,
     BaseUrl
 }
+
+enum class Network {
+    Mock,
+    Real
+}

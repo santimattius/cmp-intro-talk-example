@@ -1,8 +1,6 @@
 package com.santimattius.kmp.compose.core.data
 
-import io.ktor.client.HttpClient
-import io.ktor.client.call.body
-import io.ktor.client.request.get
+import com.santimattius.kmp.compose.core.data.sources.PictureNetworkDataSource
 import com.santimattius.kmp.compose.core.domain.Picture as DomainPicture
 
 private fun Picture.asDomain(): DomainPicture {
@@ -10,10 +8,11 @@ private fun Picture.asDomain(): DomainPicture {
 }
 
 class PictureRepository(
-    private val client: HttpClient,
+    private val networkDataSource: PictureNetworkDataSource,
 ) {
-    suspend fun random() = runCatching {
-        val response = client.get("/random")
-        response.body<Picture>().asDomain()
-    }
+    suspend fun random() = networkDataSource.random().fold(
+        onSuccess = { Result.success(it.asDomain()) },
+        onFailure = { Result.failure(it) }
+    )
 }
+
