@@ -5,13 +5,15 @@ enum class MenuOptions(
     val route: String,
     val order: Int = 99
 ) {
+    AnimatedVisibility("Animated Visibility", "/animated"),
     Flutter("Flutter Counter", "/flutter"),
     Random("Network Image", "/random"),
     Lottie("Lottie Animation", "/lottie"),
     Permissions("Permissions", ""),
-    Example1("Example 1", "/example1", order = 1),
-    Example2("Example 2", "/example2", order = 2),
-    Example3("Example 2", "/example2", order = 3),
+    Example1("1: Composable", "/example1", order = 1),
+    Example2("2: State Management", "/example2", order = 2),
+    Example3("3: Compose Layout", "/example3", order = 3),
+    NativeSupport("Native Components", "/native", order = 4),
     ;
 
     companion object {

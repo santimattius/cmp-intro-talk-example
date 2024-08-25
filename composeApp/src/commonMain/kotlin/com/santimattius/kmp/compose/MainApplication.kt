@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import com.santimattius.kmp.compose.core.ui.components.AppBar
 import com.santimattius.kmp.compose.core.ui.components.ArrowBackIcon
 import com.santimattius.kmp.compose.di.applicationModules
+import com.santimattius.kmp.compose.features.examples.getPlatform
 import com.santimattius.kmp.compose.navigation.AppNavigation
 import org.koin.compose.KoinApplication
 
@@ -35,10 +36,11 @@ fun RootContainer(
 
     Scaffold(
         topBar = {
-            val navigation = if (appState.showUpNavigation) upNavigation else empty
+            val showUpNavigation = appState.showUpNavigation
+            val navigation = if (showUpNavigation) upNavigation else empty
             if (appState.showTopAppBar) {
                 AppBar(
-                    title = "Intro to Compose Multiplatform",
+                    title = if (showUpNavigation) "" else "Compose Multiplaform",
                     navigationIcon = navigation
                 )
             }
