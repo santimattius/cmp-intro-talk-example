@@ -74,6 +74,9 @@ kotlin {
             implementation(libs.compottie.dot)
             implementation(libs.compottie.network)
             implementation(libs.compottie.resources)
+
+            implementation(libs.permissions.core)
+            implementation(libs.permissions.compose)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

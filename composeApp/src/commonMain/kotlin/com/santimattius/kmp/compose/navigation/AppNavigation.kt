@@ -14,6 +14,7 @@ import com.santimattius.kmp.compose.features.lottie.LottieScreen
 import com.santimattius.kmp.compose.features.menu.MenuOptions
 import com.santimattius.kmp.compose.features.menu.MenuScreen
 import com.santimattius.kmp.compose.features.native.NativeExample
+import com.santimattius.kmp.compose.features.permissions.PermissionExample
 import com.santimattius.kmp.compose.features.random.RandomImageScreen
 import com.santimattius.kmp.compose.features.splash.SplashScreen
 
@@ -86,6 +87,12 @@ fun AppNavigation(
             route = MenuOptions.NativeSupport.route
         ) {
             NativeExample()
+        }
+
+        composable(
+            route = MenuOptions.Permissions.route
+        ) {
+            PermissionExample()
         }
     }
 }

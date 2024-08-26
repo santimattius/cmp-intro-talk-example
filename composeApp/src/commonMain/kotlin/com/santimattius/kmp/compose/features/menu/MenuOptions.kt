@@ -9,7 +9,7 @@ enum class MenuOptions(
     Flutter("Flutter Counter", "/flutter"),
     Random("Network Image", "/random"),
     Lottie("Lottie Animation", "/lottie"),
-    Permissions("Permissions", ""),
+    Permissions("Permissions", "/permission"),
     Example1("1: Composable", "/example1", order = 1),
     Example2("2: State Management", "/example2", order = 2),
     Example3("3: Compose Layout", "/example3", order = 3),
