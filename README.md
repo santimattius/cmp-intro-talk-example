@@ -2,7 +2,7 @@
 ![Screenshot 2024-08-31 at 13-23-19 CMP for Mobile Native Developers - Intro - CMP for Mobile Native Developers - Intro pdf](https://github.com/user-attachments/assets/2cfe135d-5a5c-4a72-9ba9-9368ffbea70a)
 
 
-Presentation: [here]() 
+Presentation: [here](https://github.com/santimattius/cmp-intro-talk-example/blob/main/presentation.pdf) 
 
 
 ## Project
