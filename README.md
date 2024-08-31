@@ -1,6 +1,11 @@
-# Build iOS and Android apps 100% in Kotlin with Compose Multiplatform
+# Build iOS and Android apps 100% in Kotlin with Compose Multiplatform (Construye aplicaciones para iOS y Android 100% en Kotlin con Compose Multiplatform)
+![Screenshot 2024-08-31 at 13-23-19 CMP for Mobile Native Developers - Intro - CMP for Mobile Native Developers - Intro pdf](https://github.com/user-attachments/assets/2cfe135d-5a5c-4a72-9ba9-9368ffbea70a)
 
 
+Presentation: [here]() 
+
+
+## Project
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
