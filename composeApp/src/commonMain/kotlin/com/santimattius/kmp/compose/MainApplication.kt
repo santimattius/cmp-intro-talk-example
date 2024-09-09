@@ -9,15 +9,18 @@ import androidx.compose.ui.Modifier
 import com.santimattius.kmp.compose.core.ui.components.AppBar
 import com.santimattius.kmp.compose.core.ui.components.ArrowBackIcon
 import com.santimattius.kmp.compose.di.applicationModules
-import com.santimattius.kmp.compose.features.examples.getPlatform
 import com.santimattius.kmp.compose.navigation.AppNavigation
 import org.koin.compose.KoinApplication
+import org.koin.dsl.koinApplication
+
+fun koinConfiguration() = koinApplication {
+    // your configuration & modules here
+    modules(applicationModules())
+}
 
 @Composable
 fun MainApplication() {
-    KoinApplication(application = {
-        modules(applicationModules())
-    }) {
+    KoinApplication(application = ::koinConfiguration) {
         RootContainer()
     }
 }
