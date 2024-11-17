@@ -19,9 +19,7 @@ actual fun WebView(modifier: Modifier, url: String) {
             loadUrl(url)
             webViewClient = CustomWebViewClient()
         }
-    }, update = {
-//        it.loadUrl(url)
-    })
+    }, update = {})
 }
 
 class CustomWebViewClient : WebViewClient() {

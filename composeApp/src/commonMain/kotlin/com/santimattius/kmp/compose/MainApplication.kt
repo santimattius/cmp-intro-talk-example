@@ -11,16 +11,16 @@ import com.santimattius.kmp.compose.core.ui.components.ArrowBackIcon
 import com.santimattius.kmp.compose.di.applicationModules
 import com.santimattius.kmp.compose.navigation.AppNavigation
 import org.koin.compose.KoinApplication
-import org.koin.dsl.koinApplication
+import org.koin.dsl.KoinAppDeclaration
 
-fun koinConfiguration() = koinApplication {
+fun koinConfiguration(): KoinAppDeclaration = {
     // your configuration & modules here
     modules(applicationModules())
 }
 
 @Composable
 fun MainApplication() {
-    KoinApplication(application = ::koinConfiguration) {
+    KoinApplication(application = koinConfiguration()) {
         RootContainer()
     }
 }

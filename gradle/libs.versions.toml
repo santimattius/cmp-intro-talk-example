@@ -1,28 +1,28 @@
 [versions]
-agp = "8.6.0"
-kotlin = "2.0.20"
+agp = "8.6.1"
+kotlin = "2.0.21"
 
-android-compileSdk = "34"
+android-compileSdk = "35"
 android-minSdk = "24"
-android-targetSdk = "34"
+android-targetSdk = "35"
 
-androidx-activityCompose = "1.9.1"
+androidx-activityCompose = "1.9.3"
 androidx-appcompat = "1.7.0"
-androidx-core-ktx = "1.13.1"
+androidx-core-ktx = "1.15.0"
 
-compose = "1.6.8"
+compose = "1.7.5"
 compose-plugin = "1.6.11"
 
 androidx-navigation = "2.8.0-alpha08"
-androidx-lifecycle = "2.8.0"
+androidx-lifecycle = "2.8.3"
 
-statelyCommon = "2.0.7"
-coil = "3.0.0-alpha08"
+statelyCommon = "2.1.0"
+coil = "3.0.3"
 
-koin = "4.0.0-RC2"
+koin = "4.0.0"
 
-kotlinxCoroutinesAndroid = "1.8.1"
-ktorVersion = "2.3.12"
+kotlinxCoroutinesAndroid = "1.9.0"
+ktorVersion = "3.0.1"
 
 compottie = "2.0.0-beta02"
 permissions = "0.18.0"
@@ -39,7 +39,7 @@ androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navi
 stately-common = { module = "co.touchlab:stately-common", version.ref = "statelyCommon" }
 
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
-coil-network = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil" }
 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
