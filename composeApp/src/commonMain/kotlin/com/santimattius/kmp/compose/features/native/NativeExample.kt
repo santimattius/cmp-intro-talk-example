@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun NativeExample(modifier: Modifier = Modifier) {
     Box(modifier = modifier.fillMaxSize()) {
-        WebView(url = "https://www.google.com")
+        WebView(url = "https://www.jetbrains.com/compose-multiplatform/")
     }
 }
 

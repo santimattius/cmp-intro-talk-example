@@ -1,6 +1,7 @@
 package com.santimattius.kmp.compose.features.native
 
 import android.view.ViewGroup
+import android.webkit.WebChromeClient
 import android.webkit.WebViewClient
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -17,17 +18,9 @@ actual fun WebView(modifier: Modifier, url: String) {
                 ViewGroup.LayoutParams.MATCH_PARENT
             )
             loadUrl(url)
-            webViewClient = CustomWebViewClient()
+            webViewClient = WebViewClient()
+            webChromeClient = WebChromeClient()
+            settings.javaScriptEnabled = true
         }
     }, update = {})
-}
-
-class CustomWebViewClient : WebViewClient() {
-    @Deprecated(
-        "Deprecated in Java",
-        ReplaceWith("url != null && url.startsWith(\"https://google.com\")")
-    )
-    override fun shouldOverrideUrlLoading(view: AndroidWebView?, url: String?): Boolean {
-        return url != null && url.startsWith("https://google.com")
-    }
 }
